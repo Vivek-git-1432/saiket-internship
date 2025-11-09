@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivek G L - Portfolio</title>
+  <meta name="description" content="Portfolio website of Vivek G L - Web Developer & Designer" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">
+        <span class="brand-text">VG</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-title">
+              <span class="typing-text"></span>
+              <span class="cursor">|</span>
+            </h1>
+            <p class="hero-subtitle">Web Developer & Creative Designer</p>
+            <p class="hero-description">I create beautiful, functional, and user-friendly web experiences that make a difference.</p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary btn-lg me-3">
+                <i class="fas fa-briefcase me-2"></i>View My Work
+              </a>
+              <a href="#contact" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-envelope me-2"></i>Get In Touch
+              </a>
+            </div>
+            <div class="social-links mt-4">
+              <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="hero-image">
+            <div class="floating-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <a href="#about" class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">About Me</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">Get to know me better</p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+          <div class="about-image-wrapper">
+            <div class="about-image"></div>
+            <div class="about-badge">
+              <i class="fas fa-code"></i>
+              <span>5+ Years Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="about-content">
+            <h3 class="about-title">I'm a Passionate Web Developer</h3>
+            <p class="about-text">
+              I'm a creative web developer with a passion for building beautiful, functional, and user-friendly websites. 
+              I specialize in creating responsive designs that work seamlessly across all devices.
+            </p>
+            <p class="about-text">
+              With expertise in modern web technologies, I bring ideas to life through clean code and innovative design. 
+              I'm always eager to learn new technologies and take on challenging projects.
+            </p>
+            <div class="about-stats row mt-4">
+              <div class="col-6 col-md-3 mb-3">
+                <div class="stat-item">
+                  <h4 class="stat-number" data-target="50">0</h4>
+                  <p class="stat-label">Projects</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="stat-item">
+                  <h4 class="stat-number" data-target="30">0</h4>
+                  <p class="stat-label">Clients</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="stat-item">
+                  <h4 class="stat-number" data-target="5">0</h4>
+                  <p class="stat-label">Years</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+                <div class="stat-item">
+                  <h4 class="stat-number" data-target="100">0</h4>
+                  <p class="stat-label">Happy Clients</p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary mt-4">
+              <i class="fas fa-download me-2"></i>Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">My Skills</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">Technologies I work with</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-html5 me-2"></i>HTML
+              </span>
+              <span class="skill-percentage">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="95"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-css3-alt me-2"></i>CSS
+              </span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-js me-2"></i>JavaScript
+              </span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-react me-2"></i>React
+              </span>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-node-js me-2"></i>Node.js
+              </span>
+              <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="75"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-python me-2"></i>Python
+              </span>
+              <span class="skill-percentage">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="70"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="skills-grid" data-aos="fade-up">
+            <div class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+            <div class="skill-badge"><i class="fab fa-sass"></i> Sass</div>
+            <div class="skill-badge"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-badge"><i class="fab fa-figma"></i> Figma</div>
+            <div class="skill-badge"><i class="fas fa-database"></i> MySQL</div>
+            <div class="skill-badge"><i class="fab fa-mongodb"></i> MongoDB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">Some of my recent work</p>
+      </div>
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/project1.jpg" alt="Portfolio Project">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="View Project">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h5 class="project-title">Portfolio Website</h5>
+              <p class="project-description">A modern, responsive portfolio website built with Bootstrap, featuring smooth animations and interactive elements.</p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/project2.jpg" alt="E-commerce Project">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="View Project">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h5 class="project-title">E-Commerce Landing Page</h5>
+              <p class="project-description">A beautiful, conversion-optimized e-commerce landing page with modern UI/UX design and smooth user experience.</p>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/project3.jpg" alt="Full Stack App">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="View Project">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h5 class="project-title">Full-Stack Web App</h5>
+              <p class="project-description">A complete CRUD application with user authentication, built using Node.js, Express, and MySQL database.</p>
+              <div class="project-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/project4.jpg" alt="React Dashboard">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="View Project">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h5 class="project-title">React Dashboard</h5>
+              <p class="project-description">A modern admin dashboard with real-time data visualization, charts, and comprehensive analytics.</p>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">Material-UI</span>
+                <span class="tag">API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/project1.jpg" alt="Mobile App">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="View Project">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h5 class="project-title">Responsive Mobile App</h5>
+              <p class="project-description">A cross-platform mobile application with beautiful UI design and seamless user experience across devices.</p>
+              <div class="project-tags">
+                <span class="tag">React Native</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">API</span>
+                <span class="tag">UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/project2.jpg" alt="API Integration">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="View Project">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h5 class="project-title">REST API Project</h5>
+              <p class="project-description">A robust RESTful API with authentication, rate limiting, and comprehensive documentation using Node.js.</p>
+              <div class="project-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">JWT</span>
+                <span class="tag">Express</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">I'd love to hear from you</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="row g-4 mb-5">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="contact-info-card">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h5>Location</h5>
+                <p>Your City, Country</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="contact-info-card">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h5>Email</h5>
+                <p>your.email@example.com</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="contact-info-card">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <h5>Phone</h5>
+                <p>+1 234 567 8900</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="400">
+            <form id="contactForm" class="contact-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name" class="form-label">
+                      <i class="fas fa-user me-2"></i>Name
+                    </label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email" class="form-label">
+                      <i class="fas fa-envelope me-2"></i>Email
+                    </label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="subject" class="form-label">
+                      <i class="fas fa-tag me-2"></i>Subject
+                    </label>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="message" class="form-label">
+                      <i class="fas fa-comment me-2"></i>Message
+                    </label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg w-100">
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div id="formMessage" class="form-message mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="mb-0">© 2025 <strong>Vivek G L</strong>. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
