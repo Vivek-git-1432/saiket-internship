@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation | User REST API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+            color: #1e293b;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container-fluid {
+            max-width: 1200px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header h1 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .doc-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease;
+            animation-fill-mode: both;
+        }
+
+        .doc-card:nth-child(1) { animation-delay: 0.1s; }
+        .doc-card:nth-child(2) { animation-delay: 0.2s; }
+        .doc-card:nth-child(3) { animation-delay: 0.3s; }
+        .doc-card:nth-child(4) { animation-delay: 0.4s; }
+        .doc-card:nth-child(5) { animation-delay: 0.5s; }
+        .doc-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .endpoint-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .method-badge {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .method-get { background: var(--success); color: white; }
+        .method-post { background: var(--info); color: white; }
+        .method-put { background: var(--warning); color: white; }
+        .method-delete { background: var(--danger); color: white; }
+
+        .endpoint-url {
+            font-family: 'JetBrains Mono', monospace;
+            background: #f1f5f9;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--dark);
+            flex: 1;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: 'JSON';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .code-block pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .btn-custom {
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-1);
+            color: white;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--info);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .info-box i {
+            color: var(--info);
+            margin-right: 10px;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #e2e8f0;
+            padding: 5px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="header">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div>
+                    <h1><i class="fas fa-book me-2"></i>API Documentation</h1>
+                    <p class="text-muted mb-0 mt-2">Complete guide to the User REST API endpoints</p>
+                </div>
+                <div class="mt-3 mt-md-0">
+                    <a href="/" class="btn btn-outline-primary btn-custom me-2">
+                        <i class="fas fa-home me-2"></i>Home
+                    </a>
+                    <a href="/index.html" class="btn btn-primary-custom btn-custom">
+                        <i class="fas fa-dashboard me-2"></i>Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Base URL -->
+        <div class="doc-card">
+            <div class="section-title">
+                <i class="fas fa-link"></i>
+                Base URL
+            </div>
+            <div class="info-box">
+                <i class="fas fa-info-circle"></i>
+                All API endpoints are prefixed with: <code>http://localhost:5000/api/users</code>
+            </div>
+        </div>
+
+        <!-- GET All Users -->
+        <div class="doc-card">
+            <div class="endpoint-header">
+                <span class="method-badge method-get">GET</span>
+                <span class="endpoint-url">/api/users</span>
+            </div>
+            <p class="mb-3">Retrieve all users from the database.</p>
+            
+            <div class="section-title">
+                <i class="fas fa-code"></i>
+                Response Example
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aarav Sharma",
+      "email": "aarav@gmail.com",
+      "age": 25
+    },
+    {
+      "id": 2,
+      "name": "Priya Mehta",
+      "email": "priya@gmail.com",
+      "age": 22
+    }
+  ]
+}</pre>
+            </div>
+        </div>
+
+        <!-- GET Single User -->
+        <div class="doc-card">
+            <div class="endpoint-header">
+                <span class="method-badge method-get">GET</span>
+                <span class="endpoint-url">/api/users/:id</span>
+            </div>
+            <p class="mb-3">Retrieve a specific user by their ID.</p>
+            
+            <div class="section-title">
+                <i class="fas fa-code"></i>
+                Response Example
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "id": 1,
+  "name": "Aarav Sharma",
+  "email": "aarav@gmail.com",
+  "age": 25
+}</pre>
+            </div>
+
+            <div class="section-title mt-4">
+                <i class="fas fa-exclamation-triangle"></i>
+                Error Response (404)
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "success": false,
+  "message": "User not found"
+}</pre>
+            </div>
+        </div>
+
+        <!-- POST Create User -->
+        <div class="doc-card">
+            <div class="endpoint-header">
+                <span class="method-badge method-post">POST</span>
+                <span class="endpoint-url">/api/users</span>
+            </div>
+            <p class="mb-3">Create a new user. All fields are required.</p>
+            
+            <div class="section-title">
+                <i class="fas fa-code"></i>
+                Request Body
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "age": 30
+}</pre>
+            </div>
+
+            <div class="section-title mt-4">
+                <i class="fas fa-code"></i>
+                Success Response (201)
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "success": true,
+  "user": {
+    "id": 4,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "age": 30
+  }
+}</pre>
+            </div>
+
+            <div class="section-title mt-4">
+                <i class="fas fa-exclamation-triangle"></i>
+                Error Response (400)
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "success": false,
+  "message": "All fields are required"
+}</pre>
+            </div>
+        </div>
+
+        <!-- PUT Update User -->
+        <div class="doc-card">
+            <div class="endpoint-header">
+                <span class="method-badge method-put">PUT</span>
+                <span class="endpoint-url">/api/users/:id</span>
+            </div>
+            <p class="mb-3">Update an existing user. You can update any or all fields.</p>
+            
+            <div class="section-title">
+                <i class="fas fa-code"></i>
+                Request Body
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "name": "John Updated",
+  "email": "john.updated@example.com",
+  "age": 31
+}</pre>
+            </div>
+
+            <div class="section-title mt-4">
+                <i class="fas fa-code"></i>
+                Success Response (200)
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "success": true,
+  "user": {
+    "id": 1,
+    "name": "John Updated",
+    "email": "john.updated@example.com",
+    "age": 31
+  }
+}</pre>
+            </div>
+        </div>
+
+        <!-- DELETE User -->
+        <div class="doc-card">
+            <div class="endpoint-header">
+                <span class="method-badge method-delete">DELETE</span>
+                <span class="endpoint-url">/api/users/:id</span>
+            </div>
+            <p class="mb-3">Delete a user by their ID.</p>
+            
+            <div class="section-title">
+                <i class="fas fa-code"></i>
+                Success Response (200)
+            </div>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+                <pre>{
+  "success": true,
+  "message": "User deleted successfully"
+}</pre>
+            </div>
+        </div>
+
+        <!-- Testing with Postman -->
+        <div class="doc-card">
+            <div class="section-title">
+                <i class="fas fa-tools"></i>
+                Testing with Postman
+            </div>
+            <div class="info-box">
+                <i class="fas fa-info-circle"></i>
+                <strong>Steps to test:</strong>
+                <ol class="mt-2 mb-0">
+                    <li>Open Postman application</li>
+                    <li>Set the request method (GET, POST, PUT, DELETE)</li>
+                    <li>Enter the endpoint URL: <code>http://localhost:5000/api/users</code></li>
+                    <li>For POST/PUT requests, go to Body → raw → JSON and add the request body</li>
+                    <li>Click Send and view the response</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function copyCode(btn) {
+            const codeBlock = btn.nextElementSibling;
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = 'rgba(16, 185, 129, 0.3)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
+

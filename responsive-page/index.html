@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase | Modern Store - Premium Shopping Experience</title>
+  <meta name="description" content="Discover trendy products at unbeatable prices. ShopEase - Your one-stop destination for fashion, electronics, and lifestyle products.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#home">
+        <i class="fas fa-shopping-bag me-2"></i>ShopEase
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-3">
+            <button class="btn btn-outline-primary position-relative" id="cartBtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartBadge">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center text-light d-flex align-items-center justify-content-center hero-section">
+    <div class="hero-background"></div>
+    <div class="bg-overlay"></div>
+    <div class="animated-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container position-relative">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold mb-3">
+          <span class="typing-text">Find Your Perfect Style</span>
+        </h1>
+        <p class="lead mb-4 hero-subtitle">Discover trendy products at unbeatable prices. Quality meets affordability.</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary btn-lg me-3">
+            <i class="fas fa-shopping-bag me-2"></i>Shop Now
+          </a>
+          <a href="#about" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-info-circle me-2"></i>Learn More
+          </a>
+        </div>
+        <div class="hero-stats mt-5">
+          <div class="row g-4">
+            <div class="col-4">
+              <div class="stat-item">
+                <h3 class="counter" data-target="10000">0</h3>
+                <p>Happy Customers</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <h3 class="counter" data-target="500">0</h3>
+                <p>Products</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <h3 class="counter" data-target="50">0</h3>
+                <p>Brands</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">Our Collection</span>
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-subtitle">Handpicked items just for you</p>
+      </div>
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-card card h-100 shadow-sm">
+            <div class="product-image-wrapper">
+              <img src="assets/product1.jpg" class="card-img-top" alt="Stylish Sneakers" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn btn-light quick-view-btn" data-product="1">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="product-badge badge bg-danger">New</span>
+            </div>
+            <div class="card-body text-center">
+              <div class="product-rating mb-2">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+                <span class="ms-2 text-muted small">(4.5)</span>
+              </div>
+              <h5 class="card-title">Stylish Sneakers</h5>
+              <p class="product-price">
+                <span class="current-price">₹899.99</span>
+                <span class="old-price">₹1299.99</span>
+              </p>
+              <button class="btn btn-primary add-to-cart-btn" data-product="Stylish Sneakers" data-price="899.99">
+                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-card card h-100 shadow-sm">
+            <div class="product-image-wrapper">
+              <img src="assets/product2.jpg" class="card-img-top" alt="Casual Backpack" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn btn-light quick-view-btn" data-product="2">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="product-badge badge bg-success">Best Seller</span>
+            </div>
+            <div class="card-body text-center">
+              <div class="product-rating mb-2">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <span class="ms-2 text-muted small">(5.0)</span>
+              </div>
+              <h5 class="card-title">Casual Backpack</h5>
+              <p class="product-price">
+                <span class="current-price">₹779.99</span>
+                <span class="old-price">₹999.99</span>
+              </p>
+              <button class="btn btn-primary add-to-cart-btn" data-product="Casual Backpack" data-price="779.99">
+                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-card card h-100 shadow-sm">
+            <div class="product-image-wrapper">
+              <img src="assets/product3.jpg" class="card-img-top" alt="Classic Watch" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn btn-light quick-view-btn" data-product="3">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="product-badge badge bg-info">Premium</span>
+            </div>
+            <div class="card-body text-center">
+              <div class="product-rating mb-2">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="far fa-star text-warning"></i>
+                <span class="ms-2 text-muted small">(4.0)</span>
+              </div>
+              <h5 class="card-title">Classic Watch</h5>
+              <p class="product-price">
+                <span class="current-price">₹1090.99</span>
+                <span class="old-price">₹1499.99</span>
+              </p>
+              <button class="btn btn-primary add-to-cart-btn" data-product="Classic Watch" data-price="1090.99">
+                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="product-card card h-100 shadow-sm">
+            <div class="product-image-wrapper">
+              <img src="assets/product4.jpg" class="card-img-top" alt="Smart Headphones" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn btn-light quick-view-btn" data-product="4">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="product-badge badge bg-warning">Sale</span>
+            </div>
+            <div class="card-body text-center">
+              <div class="product-rating mb-2">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <span class="ms-2 text-muted small">(4.8)</span>
+              </div>
+              <h5 class="card-title">Smart Headphones</h5>
+              <p class="product-price">
+                <span class="current-price">₹1058.99</span>
+                <span class="old-price">₹1599.99</span>
+              </p>
+              <button class="btn btn-primary add-to-cart-btn" data-product="Smart Headphones" data-price="1058.99">
+                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <div class="section-header mb-5" data-aos="fade-up">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Why Shop With Us?</h2>
+        <p class="section-subtitle">Experience the difference</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box p-4 border rounded shadow-sm h-100">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h5>Free Shipping</h5>
+            <p class="text-muted">Enjoy fast, free delivery on all orders above ₹500.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box p-4 border rounded shadow-sm h-100">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h5>Secure Payment</h5>
+            <p class="text-muted">Your data is safe with our encrypted checkout system.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box p-4 border rounded shadow-sm h-100">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h5>24/7 Support</h5>
+            <p class="text-muted">We're always here to help you anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">Customer Reviews</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Real feedback from real customers</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p class="testimonial-text">"Amazing quality products at great prices! Fast shipping and excellent customer service. Highly recommended!"</p>
+              <div class="testimonial-author d-flex align-items-center mt-3">
+                <div class="author-avatar me-3">
+                  <i class="fas fa-user-circle fa-2x text-primary"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">Rajesh Kumar</h6>
+                  <small class="text-muted">Verified Buyer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p class="testimonial-text">"Best shopping experience ever! The products exceeded my expectations. Will definitely shop again!"</p>
+              <div class="testimonial-author d-flex align-items-center mt-3">
+                <div class="author-avatar me-3">
+                  <i class="fas fa-user-circle fa-2x text-primary"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">Priya Sharma</h6>
+                  <small class="text-muted">Verified Buyer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+              </div>
+              <p class="testimonial-text">"Great website with user-friendly interface. Found exactly what I was looking for. Fast delivery too!"</p>
+              <div class="testimonial-author d-flex align-items-center mt-3">
+                <div class="author-avatar me-3">
+                  <i class="fas fa-user-circle fa-2x text-primary"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">Amit Patel</h6>
+                  <small class="text-muted">Verified Buyer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="contact" class="py-5 text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Stay Updated</h2>
+      <p class="text-muted mb-4">Subscribe to our newsletter to get the latest deals.</p>
+      <form id="subscribeForm" class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2">
+        <input type="email" id="email" class="form-control w-auto" placeholder="Enter your email" style="max-width:350px;">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row g-4 py-5">
+        <div class="col-md-4" data-aos="fade-up">
+          <h5 class="footer-title mb-3">
+            <i class="fas fa-shopping-bag me-2"></i>ShopEase
+          </h5>
+          <p class="footer-text">Your trusted destination for quality products at unbeatable prices. Shop smart, shop with ShopEase.</p>
+          <div class="social-links mt-4">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
+          <h6 class="footer-heading mb-3">Quick Links</h6>
+          <ul class="footer-links list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <h6 class="footer-heading mb-3">Customer Service</h6>
+          <ul class="footer-links list-unstyled">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <h6 class="footer-heading mb-3">Contact Info</h6>
+          <ul class="footer-contact list-unstyled">
+            <li><i class="fas fa-phone me-2"></i>+91 98765 43210</li>
+            <li><i class="fas fa-envelope me-2"></i>info@shopease.com</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i>Bangalore, India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center py-3 border-top">
+        <p class="mb-0">© 2025 ShopEase | Designed By <span class="text-gradient">Vivek G L</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h5><i class="fas fa-shopping-cart me-2"></i>Shopping Cart</h5>
+      <button class="btn-close-cart" id="closeCart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty text-center py-5">
+        <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+        <p class="text-muted">Your cart is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total mb-3">
+        <strong>Total: <span id="cartTotal">₹0.00</span></strong>
+      </div>
+      <button class="btn btn-primary w-100 checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

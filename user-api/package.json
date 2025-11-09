@@ -1,0 +1,33 @@
+{
+  "name": "user-rest-api",
+  "version": "2.0.0",
+  "description": "A beautiful and modern REST API for user management with CRUD operations, built with Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest-api",
+    "express",
+    "nodejs",
+    "crud",
+    "user-management",
+    "api",
+    "backend"
+  ],
+  "author": "Vivek G L",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3",
+    "morgan": "^1.10.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

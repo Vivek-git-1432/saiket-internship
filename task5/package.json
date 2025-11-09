@@ -1,0 +1,29 @@
+{
+  "name": "task5",
+  "version": "1.0.0",
+  "description": "RESTful API with MySQL database for managing user data",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "init-db": "node scripts/initDatabase.js",
+    "test-db": "node scripts/testConnection.js"
+  },
+  "keywords": [
+    "rest-api",
+    "express",
+    "mysql",
+    "sql",
+    "crud"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.15.3"
+  }
+}
